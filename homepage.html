@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <h1>Welcome <span id="username"></span>..!</h1>
+    </div>
+
+    <script>
+        // Retrieve username from localStorage and display it
+        const username = localStorage.getItem('username');
+        if (username) {
+            document.getElementById('username').textContent = username;
+        } else {
+            // Handle case where username is not found (e.g., user didn't log in properly)
+            document.getElementById('username').textContent = 'Guest';
+        }
+    </script>
+</body>
+</html>

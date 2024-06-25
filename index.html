@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- <div class="background-image"> -->
+    <div class="container">
+        <button id="loginBtn" class="btn">Log In</button>
+        <button id="registerBtn" class="btn">Register</button>
+    </div>
+
+    <!-- Login Popup -->
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Log In</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" required placeholder="Enter Your Email"> 
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" required placeholder="Enter Your Password">
+                <button type="submit" class="btn">Log In</button>
+                <p class="register-link">Don't have an account? <button id="openRegisterPopup" class="btn-link" >Create Account</button></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Registration Popup -->
+    <div id="registerPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closeRegister">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" required placeholder="Enter Your First Name">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" required placeholder="Enter Your Last Name">
+                <label for="mobileNumber">Mobile Number:</label>
+                <input type="tel" id="mobileNumber" required pattern="\d{10}" title="Please enter a valid 10-digit mobile number" maxlength="10" placeholder="+91">
+                <label for="registerEmail">Email:</label>
+                <input type="email" id="registerEmail" required placeholder="Enter Your Email">
+                <label for="registerPassword">Password:</label>
+                <input type="password" id="registerPassword" required placeholder="Enter Your Password">
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p id="mobileError" class="error"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- </div> -->
+</body>
+</html>
